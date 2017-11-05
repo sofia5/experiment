@@ -1,9 +1,14 @@
+//
+// Created by safir on 2017-11-05.
+//
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <sys/time.h>
 
 struct Element {
-    int prio;
+    double prio;
     struct Element* next;
     struct Element* prev;
 };
@@ -12,10 +17,11 @@ struct Element* head;
 struct Element* tail;
 
 struct Element* GetNewElement(){
-    int random;
+    double random;
+    double timestamp;
     random = rand() % 41;
     struct Element* newElement = (struct Element*)malloc(sizeof(struct Element));
-    newElement->prio = random;
+    newElement->prio = random; //TODO: Add valid timestamp here
     newElement->next = NULL;
     newElement->prev = NULL;
 }
@@ -96,18 +102,27 @@ void PrintAll() {
 }
 
 int main() {
+    struct timespec start, stop;
     /*
-    for(int i = 0; i < 1000; i + 100) {
+    for(int i = 0; i < 1000; i = i + 50) {
         int j = 0;
         while(j < 200) {
+            //Get time in microseconds
+            clock_gettime(CLOCK_REALTIME, &start);
             InsertElements(i);
-            PrintAll();
+            clock_gettime(CLOCK_REALTIME, &stop);
+            printf("%f ", (double) (stop.tv_sec - start.tv_sec ) + ( stop.tv_nsec - start.tv_nsec));
+            //PrintAll();
             j++;
         }
+        printf("\n");
     }
-     */
+    */
     InsertElements(25);
     PrintAll();
     return 0;
+
 }
+
+
 

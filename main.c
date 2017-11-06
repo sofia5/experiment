@@ -96,6 +96,7 @@ void PrintAll() {
 }
 
 int main() {
+    srand((unsigned int)time(NULL));
     /*
     for(int i = 0; i < 1000; i + 100) {
         int j = 0;

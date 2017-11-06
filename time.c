@@ -8,7 +8,7 @@
 #include <sys/time.h>
 
 struct Element {
-    double prio;
+    int prio;
     struct Element* next;
     struct Element* prev;
 };
@@ -17,7 +17,7 @@ struct Element* head;
 struct Element* tail;
 
 struct Element* GetNewElement(){
-    double random;
+    int random;
     double timestamp;
     random = rand() % 41;
     struct Element* newElement = (struct Element*)malloc(sizeof(struct Element));
@@ -103,6 +103,7 @@ void PrintAll() {
 
 int main() {
     struct timespec start, stop;
+    srand((unsigned int)time(NULL));
     /*
     for(int i = 0; i < 1000; i = i + 50) {
         int j = 0;

@@ -1,11 +1,11 @@
-//
-// Created by safir on 2017-11-05.
-//
+/***************************************
+    Random insertions (interval 0-40)
+****************************************/
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <sys/time.h>
+#include <sys/resource.h>
 
 struct Element {
     int prio;
@@ -16,20 +16,19 @@ struct Element {
 struct Element* head;
 struct Element* tail;
 
-struct Element* GetNewElement(){
-    int random;
-    double timestamp;
-    random = rand() % 41;
+struct Element* GetNewElementRandom(){
+    //srand((unsigned int) time(NULL));
+    int random = rand() % 41;
     struct Element* newElement = (struct Element*)malloc(sizeof(struct Element));
-    newElement->prio = random; //TODO: Add valid timestamp here
+    newElement->prio = random;
     newElement->next = NULL;
     newElement->prev = NULL;
 }
 
-//Inserts a Node at tail of Doubly linked list
-void InsertFromTail(struct Element* newElement) {
+//Inserts a Node at tail of Double Linked List
+void InsertFromTailRandom (struct Element* newElement) {
     struct Element* temp = tail;
-    while ( temp != NULL && temp->prio < newElement->prio ) {
+    while (temp != NULL && temp->prio < newElement->prio) {
         temp = temp->prev;
     }
     if (temp == NULL) {
@@ -42,7 +41,7 @@ void InsertFromTail(struct Element* newElement) {
         temp->next = newElement;
         newElement->prev = temp;
 
-        if ( nextElement == NULL){
+        if (nextElement == NULL){
             tail = newElement;
         }
         else {
@@ -52,9 +51,9 @@ void InsertFromTail(struct Element* newElement) {
     }
 }
 
-void InsertFromHead (struct Element* newElement) {
+void InsertFromHeadRandom (struct Element* newElement) {
     struct Element* temp = head;
-    while ( temp != NULL && temp->prio > newElement->prio) {
+    while (temp != NULL && temp->prio > newElement->prio) {
         temp = temp->next;
     }
     if (temp == NULL) {
@@ -77,53 +76,46 @@ void InsertFromHead (struct Element* newElement) {
     }
 }
 
-void InsertElements(int numberOfElements){
+void InsertElementsRandom (int numberOfElements){
     for (int i = 0; i < numberOfElements; i++) {
-        struct Element *newElement = GetNewElement();
+        struct Element *newElement = GetNewElementRandom();
         if (head == NULL) {
             head = newElement;
             tail = newElement;
         } else if (newElement->prio >= (head->prio + tail->prio) / 2) {
-            InsertFromHead(newElement);
+            InsertFromHeadRandom (newElement);
         } else {
-            InsertFromTail(newElement);
+            InsertFromTailRandom (newElement);
         }
     }
-}
-
-//Prints all the elements in linked list in forward traversal order
-void PrintAll() {
-    struct Element* temp = head;
-    while(temp != NULL) {
-        printf("%d ",temp->prio);
-        temp = temp->next;
-    }
-    printf("\n");
 }
 
 int main() {
-    struct timespec start, stop;
     srand((unsigned int)time(NULL));
-    /*
-    for(int i = 0; i < 1000; i = i + 50) {
-        int j = 0;
-        while(j < 200) {
-            //Get time in microseconds
-            clock_gettime(CLOCK_REALTIME, &start);
-            InsertElements(i);
-            clock_gettime(CLOCK_REALTIME, &stop);
-            printf("%f ", (double) (stop.tv_sec - start.tv_sec ) + ( stop.tv_nsec - start.tv_nsec));
-            //PrintAll();
-            j++;
-        }
-        printf("\n");
+    struct timespec timeStart, timeEnd;
+    struct rusage usage;
+
+    //InsertElements(25);
+    //PrintAll();
+
+    /********************
+            Tests
+    *********************/
+    // Test 1 - Time and memory to insert 10 values
+    for (int i = 0; i < 100; i++) {
+        getrusage(RUSAGE_SELF, &usage);
+        clock_gettime(CLOCK_MONOTONIC, &timeStart);
+        InsertElementsEvent (10);
+        long memoryUsage = usage.ru_maxrss;
+        clock_gettime(CLOCK_MONOTONIC, &timeEnd);
+        long elapsedTime = timeEnd.tv_nsec - timeStart.tv_nsec;
     }
-    */
-    InsertElements(25);
-    PrintAll();
+
+    // Test 2 - Time and memory to insert 100 values
+
+
+    // Test 3 - Time and memory to insert 1000 values
+
     return 0;
-
 }
-
-
 

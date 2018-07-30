@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/Event-based/doubleLinkedList.h
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+sys/resource.h
+-
+
+/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/Event-based/main.c
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+sys/resource.h
+-
+doubleLinkedList.h
+/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/Event-based/doubleLinkedList.h
+splaytree.h
+/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/Event-based/splaytree.h
+
+/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/Event-based/splaytree.h
+stdio.h
+-
+stdlib.h
+-
+

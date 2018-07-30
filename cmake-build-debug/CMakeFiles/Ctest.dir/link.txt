@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -Wl,--enable-auto-import CMakeFiles/Ctest.dir/randomEval.c.o CMakeFiles/Ctest.dir/Event-based/main.c.o CMakeFiles/Ctest.dir/Ref.c.o  -o Ctest.exe -Wl,--out-implib,libCtest.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 struct Node {
     int priority;
     struct Node* left;
@@ -88,13 +89,9 @@ struct Node* splay(struct Node*cur, int prio){
 
 }
 
-struct Node* insert(struct Node* cur, struct Node* newNode) {
 
-    //If node is already inserted in tree, skip
-    if(newNode->priority == cur->priority){
-        cur->left = cur->left;
-    }
-    else if (newNode->priority < cur->priority)
+struct Node* insert(struct Node* cur, struct Node* newNode) {
+    if (newNode->priority < cur->priority)
         if(cur->left == NULL){
             cur->left = newNode;
         }
@@ -113,16 +110,64 @@ struct Node* insert(struct Node* cur, struct Node* newNode) {
 
 void insertNodesSplaytree(int numOfNodes) {
     for(int i = 0; i< numOfNodes; i++){
-        struct Node *newNodes = GetNewNodes();
-        printf("%d",newNodes->priority);
+        struct Node *newNode = GetNewNodes();
+        printf("%d",newNode->priority);
         if(!root){
-            root = newNodes;
+            root = newNode;
         }
         else {
-            insert(root, newNodes);
-            while (newNodes->priority != root->priority) {
-                root = splay(root, newNodes->priority);
+            insert(root, newNode);
+            while (newNode->priority != root->priority) {
+                root = splay(root, newNode->priority);
             }
         }
+        printTree(root);
     }
+}
+
+//Print tree arranged by priorities (Based on: https://stackoverflow.com/questions/801740/c-how-to-draw-a-binary-tree-to-the-console)
+void printTree(struct Node *tree)
+{
+    char s[20][255];
+    for (int i = 0; i < 20; i++)
+        sprintf(s[i], "%80s", " ");
+
+    _printTree(tree, 0, 0, 0, s);
+
+    for (int i = 0; i < 20; i++)
+        printf("%s\n", s[i]);
+}
+
+int _printTree(struct Node *tree, int is_left, int offset, int depth, char s[20][255])
+{
+    char b[20];
+    int width = 5;
+
+    if (!tree) return 0;
+
+    sprintf(b, "%f", tree->priority);
+
+    int left  = _printTree(tree->left,  1, offset,                depth + 1, s);
+    int right = _printTree(tree->right, 0, offset + left + width, depth + 1, s);
+
+
+    for (int i = 0; i < width; i++)
+        s[2 * depth][offset + left + i] = b[i];
+
+    if (depth && is_left) { for (int i = 0; i < width + right; i++)
+            s[2 * depth - 1][offset + left + width/2 + i] = '-';
+
+        s[2 * depth - 1][offset + left + width/2] = '+';
+        s[2 * depth - 1][offset + left + width + right + width/2] = '+';
+
+    } else if (depth && !is_left) {
+
+        for (int i = 0; i < left + width; i++)
+            s[2 * depth - 1][offset - width/2 + i] = '-';
+
+        s[2 * depth - 1][offset + left + width/2] = '+';
+        s[2 * depth - 1][offset - width/2 - 1] = '+';
+    }
+
+    return left + width + right;
 }

@@ -8,8 +8,7 @@
 #include <sys/resource.h>
 
 struct Node {
-    //int prio;
-    double prio;
+    int prio;
     struct Node* next;
     struct Node* prev;
 };
@@ -17,8 +16,7 @@ struct Node {
 struct Node* head;
 struct Node* tail;
 
-struct Node* GetNewElementRandom(){
-    //srand((unsigned int) time(NULL));
+struct Node* getNewElementRandom(){
     int random = rand() % 41;
     struct Node* newElement = (struct Node*)malloc(sizeof(struct Node));
     newElement->prio = random;
@@ -27,7 +25,7 @@ struct Node* GetNewElementRandom(){
 }
 
 //Inserts a Node at tail of Double Linked List
-void InsertFromTailRandom (struct Node* newElement) {
+void insertFromTailRandom (struct Node* newElement) {
     struct Node* temp = tail;
     while (temp != NULL && temp->prio < newElement->prio) {
         temp = temp->prev;
@@ -52,7 +50,7 @@ void InsertFromTailRandom (struct Node* newElement) {
     }
 }
 
-void InsertFromHeadRandom (struct Node* newElement) {
+void insertFromHeadRandom (struct Node* newElement) {
     struct Node* temp = head;
     while (temp != NULL && temp->prio > newElement->prio) {
         temp = temp->next;
@@ -77,46 +75,19 @@ void InsertFromHeadRandom (struct Node* newElement) {
     }
 }
 
-void InsertElementsRandom (int numberOfElements){
+void insertElementsDoubleLinkedList (int numberOfElements){
     for (int i = 0; i < numberOfElements; i++) {
-        struct Node *newElement = GetNewElementRandom();
+        struct Node *newElement = getNewElementRandom();
         if (head == NULL) {
             head = newElement;
             tail = newElement;
         } else if (newElement->prio >= (head->prio + tail->prio) / 2) {
-            InsertFromHeadRandom (newElement);
+            insertFromHeadRandom (newElement);
         } else {
-            InsertFromTailRandom (newElement);
+            insertFromTailRandom (newElement);
         }
     }
 }
 
-int main() {
-    srand((unsigned int)time(NULL));
-    struct timespec timeStart, timeEnd;
-    struct rusage usage;
 
-    //InsertElements(25);
-    //PrintAll();
-
-    /********************
-            Tests
-    *********************/
-    // Test 1 - Time and memory to insert 10 values
-    for (int i = 0; i < 100; i++) {
-        getrusage(RUSAGE_SELF, &usage);
-        clock_gettime(CLOCK_MONOTONIC, &timeStart);
-        InsertElementsEvent (10);
-        long memoryUsage = usage.ru_maxrss;
-        clock_gettime(CLOCK_MONOTONIC, &timeEnd);
-        long elapsedTime = timeEnd.tv_nsec - timeStart.tv_nsec;
-    }
-
-    // Test 2 - Time and memory to insert 100 values
-
-
-    // Test 3 - Time and memory to insert 1000 values
-
-    return 0;
-}
 

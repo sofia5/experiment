@@ -3,86 +3,19 @@
 
 
 struct Node {
-    int priority;
+    double priority;
     struct Node* left;
     struct Node* right;
 };
 
 struct Node* root;
 
-
-//Reference
-int _print_t(struct Node *tree, int is_left, int offset, int depth, char s[20][255])
-{
-    char b[20];
-    int width = 5;
-
-    if (!tree) return 0;
-
-    sprintf(b, "(%03d)", tree->priority);
-
-    int left  = _print_t(tree->left,  1, offset,                depth + 1, s);
-    int right = _print_t(tree->right, 0, offset + left + width, depth + 1, s);
-
-#ifdef COMPACT
-    for (int i = 0; i < width; i++)
-        s[depth][offset + left + i] = b[i];
-
-    if (depth && is_left) {
-
-        for (int i = 0; i < width + right; i++)
-            s[depth - 1][offset + left + width/2 + i] = '-';
-
-        s[depth - 1][offset + left + width/2] = '.';
-
-    } else if (depth && !is_left) {
-
-        for (int i = 0; i < left + width; i++)
-            s[depth - 1][offset - width/2 + i] = '-';
-
-        s[depth - 1][offset + left + width/2] = '.';
-    }
-#else
-    for (int i = 0; i < width; i++)
-        s[2 * depth][offset + left + i] = b[i];
-
-    if (depth && is_left) { for (int i = 0; i < width + right; i++)
-            s[2 * depth - 1][offset + left + width/2 + i] = '-';
-
-        s[2 * depth - 1][offset + left + width/2] = '+';
-        s[2 * depth - 1][offset + left + width + right + width/2] = '+';
-
-    } else if (depth && !is_left) {
-
-        for (int i = 0; i < left + width; i++)
-            s[2 * depth - 1][offset - width/2 + i] = '-';
-
-        s[2 * depth - 1][offset + left + width/2] = '+';
-        s[2 * depth - 1][offset - width/2 - 1] = '+';
-    }
-#endif
-
-    return left + width + right;
-}
-
-void print_t(struct Node *tree)
-{
-    char s[20][255];
-    for (int i = 0; i < 20; i++)
-        sprintf(s[i], "%80s", " ");
-
-    _print_t(tree, 0, 0, 0, s);
-
-    for (int i = 0; i < 20; i++)
-        printf("%s\n", s[i]);
-}
-
-
-struct Node* GetNewNodes(){
-    int random;
-    random = rand() % 41;
+struct Node* getNewNodes(){
+    double timestamp = time(NULL);
+    double increment = rand();
+    double prio = timestamp + increment;
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
-    newNode->priority = random;
+    newNode->priority = prio;
     newNode->left = NULL;
     newNode->right = NULL;
 }
@@ -105,7 +38,7 @@ struct Node* leftRot(struct Node* n){
     return temp;
 }
 
-struct Node* splay(struct Node*cur, int prio){
+struct Node* splay(struct Node*cur, double prio){
     if(cur == NULL || cur->priority == prio){
         return cur;
     }
@@ -157,14 +90,13 @@ struct Node* splay(struct Node*cur, int prio){
 
 }
 
-
 struct Node* insert(struct Node* cur, struct Node* newNode) {
 
-    //If node is already inserted in tree, skip
-    if(newNode->priority == cur->priority){
-        cur->left = cur->left;
-    }
-    else if (newNode->priority < cur->priority)
+//    //If node is already inserted in tree, skip
+//    if(newNode->priority == cur->priority){
+//        cur->left = cur->left;
+//    }
+    if (newNode->priority <= cur->priority)
         if(cur->left == NULL){
             cur->left = newNode;
         }
@@ -183,8 +115,8 @@ struct Node* insert(struct Node* cur, struct Node* newNode) {
 
 void insertNodesSplaytree(int numOfNodes) {
     for(int i = 0; i< numOfNodes; i++){
-        struct Node *newNode = GetNewNodes();
-        printf("%d",newNode->priority);
+        struct Node *newNode = getNewNodes();
+        //printf("%f",newNode->priority);
         if(!root){
             root = newNode;
         }
@@ -194,6 +126,55 @@ void insertNodesSplaytree(int numOfNodes) {
                 root = splay(root, newNode->priority);
             }
         }
-        print_t(root);
+        printTree(root);
     }
 }
+
+
+//Print tree arranged by priorities (Based on: https://stackoverflow.com/questions/801740/c-how-to-draw-a-binary-tree-to-the-console)
+void printTree(struct Node *tree)
+{
+    char s[20][255];
+    for (int i = 0; i < 20; i++)
+        sprintf(s[i], "%80s", " ");
+
+    _printTree(tree, 0, 0, 0, s);
+
+    for (int i = 0; i < 20; i++)
+        printf("%s\n", s[i]);
+}
+
+int _printTree(struct Node *tree, int is_left, int offset, int depth, char s[20][255])
+{
+    char b[20];
+    int width = 5;
+
+    if (!tree) return 0;
+
+    sprintf(b, "%f", tree->priority);
+
+    int left  = _printTree(tree->left,  1, offset,                depth + 1, s);
+    int right = _printTree(tree->right, 0, offset + left + width, depth + 1, s);
+
+
+    for (int i = 0; i < width; i++)
+        s[2 * depth][offset + left + i] = b[i];
+
+    if (depth && is_left) { for (int i = 0; i < width + right; i++)
+            s[2 * depth - 1][offset + left + width/2 + i] = '-';
+
+        s[2 * depth - 1][offset + left + width/2] = '+';
+        s[2 * depth - 1][offset + left + width + right + width/2] = '+';
+
+    } else if (depth && !is_left) {
+
+        for (int i = 0; i < left + width; i++)
+            s[2 * depth - 1][offset - width/2 + i] = '-';
+
+        s[2 * depth - 1][offset + left + width/2] = '+';
+        s[2 * depth - 1][offset - width/2 - 1] = '+';
+    }
+
+    return left + width + right;
+}
+

@@ -8,7 +8,6 @@
 #include <sys/resource.h>
 
 struct Element {
-    //int prio;
     double prio;
     struct Element* next;
     struct Element* prev;
@@ -28,9 +27,9 @@ struct Element* GetNewElementEvent(){
 }
 
 //Inserts a Node at tail of Double Linked List
-void InsertFromTailEvent (struct Element* newElement) {
+void insertFromTailEvent (struct Element* newElement) {
     struct Element* temp = tail;
-    while (temp != NULL && temp->prio < newElement->prio) {
+    while (temp != NULL && temp->prio > newElement->prio) {
         temp = temp->prev;
     }
     if (temp == NULL) {
@@ -53,9 +52,9 @@ void InsertFromTailEvent (struct Element* newElement) {
     }
 }
 
-void InsertFromHeadEvent (struct Element* newElement) {
+void insertFromHeadEvent (struct Element* newElement) {
     struct Element* temp = head;
-    while (temp != NULL && temp->prio > newElement->prio) {
+    while (temp != NULL && temp->prio < newElement->prio) {
         temp = temp->next;
     }
     if (temp == NULL) {
@@ -78,28 +77,26 @@ void InsertFromHeadEvent (struct Element* newElement) {
     }
 }
 
-void InsertElementsEvent(int numberOfElements){
+void insertElementsDoubleLinkedList(int numberOfElements){
     for (int i = 0; i < numberOfElements; i++) {
         struct Element *newElement = GetNewElementEvent();
         if (head == NULL) {
             head = newElement;
             tail = newElement;
         } else if (newElement->prio >= (head->prio + tail->prio) / 2) {
-            InsertFromHeadEvent (newElement);
+            insertFromHeadEvent (newElement);
         } else {
-            InsertFromTailEvent (newElement);
+            insertFromTailEvent (newElement);
         }
     }
 }
 
 //Prints all the elements in linked list in forward traversal order
-void PrintAll() {
+void printAll() {
     FILE *fp;
     fp = fopen("output.txt", "w");
     struct Element* temp = head;
     while(temp != NULL) {
-        //printf("%d ",temp->prio);
-        printf("%f ",temp->prio);
         fprintf(fp, "%f\n", temp->prio);
         temp = temp->next;
     }

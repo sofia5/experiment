@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 struct Node {
     int priority;
     struct Node* left;
@@ -9,74 +8,6 @@ struct Node {
 };
 
 struct Node* root;
-
-
-//Reference
-int _print_t(struct Node *tree, int is_left, int offset, int depth, char s[20][255])
-{
-    char b[20];
-    int width = 5;
-
-    if (!tree) return 0;
-
-    sprintf(b, "(%03d)", tree->priority);
-
-    int left  = _print_t(tree->left,  1, offset,                depth + 1, s);
-    int right = _print_t(tree->right, 0, offset + left + width, depth + 1, s);
-
-#ifdef COMPACT
-    for (int i = 0; i < width; i++)
-        s[depth][offset + left + i] = b[i];
-
-    if (depth && is_left) {
-
-        for (int i = 0; i < width + right; i++)
-            s[depth - 1][offset + left + width/2 + i] = '-';
-
-        s[depth - 1][offset + left + width/2] = '.';
-
-    } else if (depth && !is_left) {
-
-        for (int i = 0; i < left + width; i++)
-            s[depth - 1][offset - width/2 + i] = '-';
-
-        s[depth - 1][offset + left + width/2] = '.';
-    }
-#else
-    for (int i = 0; i < width; i++)
-        s[2 * depth][offset + left + i] = b[i];
-
-    if (depth && is_left) { for (int i = 0; i < width + right; i++)
-            s[2 * depth - 1][offset + left + width/2 + i] = '-';
-
-        s[2 * depth - 1][offset + left + width/2] = '+';
-        s[2 * depth - 1][offset + left + width + right + width/2] = '+';
-
-    } else if (depth && !is_left) {
-
-        for (int i = 0; i < left + width; i++)
-            s[2 * depth - 1][offset - width/2 + i] = '-';
-
-        s[2 * depth - 1][offset + left + width/2] = '+';
-        s[2 * depth - 1][offset - width/2 - 1] = '+';
-    }
-#endif
-
-    return left + width + right;
-}
-
-void print_t(struct Node *tree)
-{
-    char s[20][255];
-    for (int i = 0; i < 20; i++)
-        sprintf(s[i], "%80s", " ");
-
-    _print_t(tree, 0, 0, 0, s);
-
-    for (int i = 0; i < 20; i++)
-        printf("%s\n", s[i]);
-}
-
 
 struct Node* GetNewNodes(){
     int random;
@@ -157,7 +88,6 @@ struct Node* splay(struct Node*cur, int prio){
 
 }
 
-
 struct Node* insert(struct Node* cur, struct Node* newNode) {
 
     //If node is already inserted in tree, skip
@@ -181,25 +111,18 @@ struct Node* insert(struct Node* cur, struct Node* newNode) {
 }
 
 
-void insertNodes(int numOfNodes) {
+void insertNodesSplaytree(int numOfNodes) {
     for(int i = 0; i< numOfNodes; i++){
-        struct Node *newNode = GetNewNodes();
-        printf("%d",newNode->priority);
+        struct Node *newNodes = GetNewNodes();
+        printf("%d",newNodes->priority);
         if(!root){
-            root = newNode;
+            root = newNodes;
         }
         else {
-            insert(root, newNode);
-            while (newNode->priority != root->priority) {
-                root = splay(root, newNode->priority);
+            insert(root, newNodes);
+            while (newNodes->priority != root->priority) {
+                root = splay(root, newNodes->priority);
             }
         }
-        print_t(root);
     }
 }
-
-int main(){
-    insertNodes(10);
-}
-
-

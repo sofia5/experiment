@@ -181,7 +181,7 @@ struct Node* insert(struct Node* cur, struct Node* newNode) {
 }
 
 
-void insertNodes(int numOfNodes) {
+void insertNodesSplaytree(int numOfNodes) {
     for(int i = 0; i< numOfNodes; i++){
         struct Node *newNode = GetNewNodes();
         printf("%d",newNode->priority);
@@ -197,9 +197,3 @@ void insertNodes(int numOfNodes) {
         print_t(root);
     }
 }
-
-int main(){
-    insertNodes(10);
-}
-
-

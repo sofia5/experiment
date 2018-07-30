@@ -7,28 +7,28 @@
 #include <time.h>
 #include <sys/resource.h>
 
-struct Element {
+struct Node {
     //int prio;
     double prio;
-    struct Element* next;
-    struct Element* prev;
+    struct Node* next;
+    struct Node* prev;
 };
 
-struct Element* head;
-struct Element* tail;
+struct Node* head;
+struct Node* tail;
 
-struct Element* GetNewElementRandom(){
+struct Node* GetNewElementRandom(){
     //srand((unsigned int) time(NULL));
     int random = rand() % 41;
-    struct Element* newElement = (struct Element*)malloc(sizeof(struct Element));
+    struct Node* newElement = (struct Node*)malloc(sizeof(struct Node));
     newElement->prio = random;
     newElement->next = NULL;
     newElement->prev = NULL;
 }
 
 //Inserts a Node at tail of Double Linked List
-void InsertFromTailRandom (struct Element* newElement) {
-    struct Element* temp = tail;
+void InsertFromTailRandom (struct Node* newElement) {
+    struct Node* temp = tail;
     while (temp != NULL && temp->prio < newElement->prio) {
         temp = temp->prev;
     }
@@ -38,7 +38,7 @@ void InsertFromTailRandom (struct Element* newElement) {
         head = newElement;
     }
     else {
-        struct Element* nextElement = temp->next;
+        struct Node* nextElement = temp->next;
         temp->next = newElement;
         newElement->prev = temp;
 
@@ -52,8 +52,8 @@ void InsertFromTailRandom (struct Element* newElement) {
     }
 }
 
-void InsertFromHeadRandom (struct Element* newElement) {
-    struct Element* temp = head;
+void InsertFromHeadRandom (struct Node* newElement) {
+    struct Node* temp = head;
     while (temp != NULL && temp->prio > newElement->prio) {
         temp = temp->next;
     }
@@ -63,7 +63,7 @@ void InsertFromHeadRandom (struct Element* newElement) {
         tail = newElement;
     }
     else {
-        struct Element* prevElement = temp->prev;
+        struct Node* prevElement = temp->prev;
         temp->prev = newElement;
         newElement->next = temp;
 
@@ -79,7 +79,7 @@ void InsertFromHeadRandom (struct Element* newElement) {
 
 void InsertElementsRandom (int numberOfElements){
     for (int i = 0; i < numberOfElements; i++) {
-        struct Element *newElement = GetNewElementRandom();
+        struct Node *newElement = GetNewElementRandom();
         if (head == NULL) {
             head = newElement;
             tail = newElement;

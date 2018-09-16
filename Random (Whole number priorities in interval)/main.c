@@ -2,77 +2,97 @@
 #include <stdlib.h>
 #include <time.h>
 #include <sys/resource.h>
+#include <limits.h>
 #include "doubleLinkedList.h"
 #include "splaytree.h"
 
 
+static double converterToSeconds(struct timespec *ts){
+    return (double)ts->tv_sec + (double)ts->tv_nsec / 1000000000.0;
+};
 
-int main() {
-
-    //testDoubleLinkedList();
-    testSplaytree();
-    return 0;
-
-}
 /********************
         Tests
 *********************/
 // Test - Time and memory to insert n (10, 100, 1000) values
 void testDoubleLinkedList(int numberOfValues) {
-    char filename[64];
-    sprintf(filename, "output%s%d.txt", "RandomDoubleLinkedList", numberOfValues);
-    fclose(fopen(filename, "w"));
-
-    srand((unsigned int) time(NULL));
+    srand((unsigned int) time(NULL)); //Used for increased randomness
     struct timespec timeStart, timeEnd;
+
     struct rusage usage;
+    long memoryUsage = 0;
+    double elapsedTime = 0;
+    double longestTime = LONG_MIN;
+    double shortestTime = LONG_MAX;
+    double sumOfTime = 0;
+    double avgTime = 0;
+    int numberOfElements = 10;
 
-    for (int i = 0; i < 100; i++) {
-        getrusage(RUSAGE_SELF, &usage);
-        clock_gettime(CLOCK_MONOTONIC, &timeStart);
-        insertElementsDoubleLinkedList(numberOfValues);
-        long memoryUsage = usage.ru_maxrss;
-        clock_gettime(CLOCK_MONOTONIC, &timeEnd);
-        long elapsedTime = timeEnd.tv_nsec - timeStart.tv_nsec;
+    FILE *fp;
+    fopen("randomDoubleLinkedList", "w+");
 
+    while(numberOfElements <= 100) {
+        for (int i = 0; i < 100; i++) {
+            getrusage(RUSAGE_SELF, &usage);
+            clock_gettime(CLOCK_MONOTONIC, &timeStart);
+            insertElementsDoubleLinkedList(numberOfValues);
+            clock_gettime(CLOCK_MONOTONIC, &timeEnd);
+            memoryUsage = usage.ru_maxrss;
+            elapsedTime = converterToSeconds(&timeEnd) - converterToSeconds(&timeStart);
+            if (longestTime < elapsedTime) longestTime = elapsedTime;
+            if (shortestTime > elapsedTime) shortestTime = elapsedTime;
+            sumOfTime += elapsedTime;
+
+        }
         //Print
-        FILE *fp;
-        char filename[64];
-        sprintf(filename, "output%s%d.txt", "RandomDoubleLinkedList", numberOfValues);
-        fp = fopen(filename, "a");
-        fprintf(fp, "%ld\t%ld\n", elapsedTime, memoryUsage);
-        fclose(fp);
+        avgTime = sumOfTime / 100;
+        fprintf(fp,"Number of elements:%d\t Best time:%f\t Worst time:%f\t Average time:%f\t Memory usage: %ld\n",
+                numberOfElements, shortestTime, longestTime, avgTime, memoryUsage);
+        numberOfElements += 10;
     }
+    fclose(fp);
 }
 
 // Test - Time and memory to insert n (10, 100, 1000) values
-void testSplaytree(int numberOfValues) {
-    insertNodesSplaytree(numberOfValues);
+void testSplaytree() {
+    srand((unsigned int) time(NULL));
+    struct timespec timeStart, timeEnd;
+    struct rusage usage;
+    long memoryUsage = 0;
+    double elapsedTime = 0;
+    double longestTime = 0;
+    double shortestTime = 10000;
+    double sumOfTime = 0;
+    int numberOfElements = 10;
 
-//    char filename[64];
-//    sprintf(filename, "output%s%d.txt", "RandomSplaytree", numberOfValues);
-//    fclose(fopen(filename, "w"));
-//
-//    srand((unsigned int) time(NULL));
-//    struct timespec timeStart, timeEnd;
-//    struct rusage usage;
-//
-//    for (int i = 0; i < 100; i++) {
-//        getrusage(RUSAGE_SELF, &usage);
-//        clock_gettime(CLOCK_MONOTONIC, &timeStart);
-//        insertNodesSplaytree(numberOfValues);
-//        long memoryUsage = usage.ru_maxrss;
-//        clock_gettime(CLOCK_MONOTONIC, &timeEnd);
-//        long elapsedTime = timeEnd.tv_nsec - timeStart.tv_nsec;
-//
-//        //Print
-//        FILE *fp;
-//        char filename[64];
-//        sprintf(filename, "output%s%d.txt", "RandomSplaytree", numberOfValues);
-//        fp = fopen(filename, "a");
-//        fprintf(fp, "%ld\t%ld\n", elapsedTime, memoryUsage);
-//        fclose(fp);
-//    }
+    FILE *fp;
+    fp = fopen("EventSplaytree", "w+");
+
+    while(numberOfElements <= 100) {
+        for (int i = 0; i < 100; i++) {
+            getrusage(RUSAGE_SELF, &usage);
+            clock_gettime(CLOCK_MONOTONIC, &timeStart);
+            insertNodesSplaytree(numberOfElements);
+            clock_gettime(CLOCK_MONOTONIC, &timeEnd);
+            memoryUsage = usage.ru_maxrss;
+            elapsedTime = converterToSeconds(&timeEnd) - converterToSeconds(&timeStart);
+            if(longestTime < elapsedTime) longestTime = elapsedTime;
+            if(shortestTime > elapsedTime) shortestTime = elapsedTime;
+            sumOfTime += elapsedTime;
+        }
+        //Print
+        double avgTime = sumOfTime / 100;
+        fprintf(fp, "Number of elements:%d\t Best time:%f\t Worst time:%f\t Average time:%f\t Memory usage: %ld\n",
+                numberOfElements, shortestTime, longestTime, avgTime, memoryUsage);
+        numberOfElements += 10;
+    }
+    fclose(fp);
+}
+
+int main() {
+    //testDoubleLinkedList();
+    testSplaytree();
+    return 0;
 }
 
 

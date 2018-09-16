@@ -10,7 +10,7 @@
 #include "splaytree.h"
 
 
-static double TimeSpecToSec(struct timespec* ts){
+static double converterToSeconds(struct timespec *ts){
     return (double)ts->tv_sec + (double)ts->tv_nsec / 1000000000.0;
 };
 
@@ -42,7 +42,7 @@ void testDoubleLinkedList() {
             insertElementsDoubleLinkedList(num);
             clock_gettime(CLOCK_MONOTONIC, &timeEnd);
             memoryUsage = usage.ru_maxrss;
-            elapsedTime = TimeSpecToSec(&timeEnd) - TimeSpecToSec(&timeStart);
+            elapsedTime = converterToSeconds(&timeEnd) - converterToSeconds(&timeStart);
             if(longestTime < elapsedTime) longestTime = elapsedTime;
             if(shortestTime > elapsedTime) shortestTime = elapsedTime;
             sumOfTime += elapsedTime;
@@ -80,7 +80,7 @@ void testSplaytree() {
             insertNodesSplaytree(numberOfElements);
             clock_gettime(CLOCK_MONOTONIC, &timeEnd);
             memoryUsage = usage.ru_maxrss;
-            elapsedTime = TimeSpecToSec(&timeEnd) - TimeSpecToSec(&timeStart);
+            elapsedTime = converterToSeconds(&timeEnd) - converterToSeconds(&timeStart);
             if(longestTime < elapsedTime) longestTime = elapsedTime;
             if(shortestTime > elapsedTime) shortestTime = elapsedTime;
             sumOfTime += elapsedTime;

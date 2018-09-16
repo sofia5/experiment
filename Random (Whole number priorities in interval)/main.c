@@ -9,13 +9,8 @@
 
 int main() {
 
-    //testDoubleLinkedList(10);
-    //testDoubleLinkedList(100);
-    //testDoubleLinkedList(1000);
-    testSplaytree(10);
-    //testSplaytree(100);
-    //testSplaytree(1000);
-
+    //testDoubleLinkedList();
+    testSplaytree();
     return 0;
 
 }

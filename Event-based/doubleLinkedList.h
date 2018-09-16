@@ -93,14 +93,11 @@ void insertElementsDoubleLinkedList(int numberOfElements){
 
 //Prints all the elements in linked list in forward traversal order
 void printAll() {
-    FILE *fp;
-    fp = fopen("output.txt", "w");
     struct Element* temp = head;
     while(temp != NULL) {
-        fprintf(fp, "%f\n", temp->prio);
+        printf("%f\t", temp->prio);
         temp = temp->next;
     }
-    fclose(fp);
     printf("\n");
 }
 

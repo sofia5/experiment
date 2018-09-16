@@ -25,6 +25,10 @@ time.h
 -
 sys/resource.h
 -
+unistd.h
+-
+limits.h
+-
 doubleLinkedList.h
 /cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/Event-based/doubleLinkedList.h
 splaytree.h

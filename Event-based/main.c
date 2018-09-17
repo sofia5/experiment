@@ -22,23 +22,23 @@ static double converterToSeconds(struct timespec *ts){
 void testDoubleLinkedList() {
     srand((unsigned int) time(NULL));
     struct timespec timeStart, timeEnd;
-
     struct rusage usage;
-    long memoryUsage = 0;
-    double elapsedTime = 0;
-    double longestTime = LONG_MIN;
-    double shortestTime = LONG_MAX;
-    double sumOfTime = 0;
     int numberOfElements = 10;
 
     FILE *fp;
     fp = fopen("EventDoubleLinkedList", "w+");
 
     while(numberOfElements <= 1000) {
+        long memoryUsage = 0;
+        double averageTime = 0;
+        double elapsedTime = 0;
+        double longestTime = LONG_MIN;
+        double shortestTime = LONG_MAX;
+        double sumOfTime = 0;
         for (int i = 0; i < 100; i++) {
+            int num = numberOfElements;
             getrusage(RUSAGE_SELF, &usage);
             clock_gettime(CLOCK_MONOTONIC, &timeStart);
-            int num = numberOfElements;
             insertElementsDoubleLinkedList(num);
             clock_gettime(CLOCK_MONOTONIC, &timeEnd);
             memoryUsage = usage.ru_maxrss;
@@ -49,9 +49,11 @@ void testDoubleLinkedList() {
 
         }
         //Print
-        double avgTime = sumOfTime / 100;
+        averageTime = sumOfTime / 100;
         fprintf(fp,"Number of elements:%d\t Best time:%f\t Worst time:%f\t Average time:%f\t Memory usage: %ld\n",
-                numberOfElements, shortestTime, longestTime, avgTime, memoryUsage);
+                numberOfElements, shortestTime, longestTime, averageTime, memoryUsage);
+        printf("Number of elements:%d\t Best time:%f\t Worst time:%f\t Average time:%f\t Memory usage: %ld\n",
+                numberOfElements, shortestTime, longestTime, averageTime, memoryUsage);
         numberOfElements += 10;
     }
     fclose(fp);
@@ -74,6 +76,7 @@ void testSplaytree() {
     fp = fopen("EventSplaytree", "w+");
 
     while(numberOfElements <= 100) {
+        double averageTime = 0;
         for (int i = 0; i < 100; i++) {
             getrusage(RUSAGE_SELF, &usage);
             clock_gettime(CLOCK_MONOTONIC, &timeStart);
@@ -86,9 +89,9 @@ void testSplaytree() {
             sumOfTime += elapsedTime;
         }
         //Print
-        double avgTime = sumOfTime / 100;
+        averageTime = sumOfTime / 100;
         fprintf(fp, "Number of elements:%d\t Best time:%f\t Worst time:%f\t Average time:%f\t Memory usage: %ld\n",
-                numberOfElements, shortestTime, longestTime, avgTime, memoryUsage);
+                numberOfElements, shortestTime, longestTime, averageTime, memoryUsage);
         numberOfElements += 10;
     }
     fclose(fp);

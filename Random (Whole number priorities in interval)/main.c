@@ -20,18 +20,19 @@ void testDoubleLinkedList(int numberOfValues) {
     struct timespec timeStart, timeEnd;
 
     struct rusage usage;
-    long memoryUsage = 0;
-    double elapsedTime = 0;
-    double longestTime = LONG_MIN;
-    double shortestTime = LONG_MAX;
-    double sumOfTime = 0;
-    double avgTime = 0;
     int numberOfElements = 10;
 
     FILE *fp;
     fopen("randomDoubleLinkedList", "w+");
 
     while(numberOfElements <= 100) {
+        long memoryUsage = 0;
+        double elapsedTime = 0;
+        double longestTime = LONG_MIN;
+        double shortestTime = LONG_MAX;
+        double sumOfTime = 0;
+        double avgTime = 0;
+
         for (int i = 0; i < 100; i++) {
             getrusage(RUSAGE_SELF, &usage);
             clock_gettime(CLOCK_MONOTONIC, &timeStart);
@@ -70,6 +71,7 @@ void testSplaytree() {
         double shortestTime = 10000;
         double sumOfTime = 0;
         double averageTime = 0;
+        
         for (int i = 0; i < 100; i++) {
             getrusage(RUSAGE_SELF, &usage);
             clock_gettime(CLOCK_MONOTONIC, &timeStart);

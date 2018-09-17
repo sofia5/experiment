@@ -76,6 +76,8 @@ void insertFromHeadRandom (struct Node* newElement) {
 }
 
 void insertElementsDoubleLinkedList (int numberOfElements){
+    head = NULL;
+    tail = NULL;
     for (int i = 0; i < numberOfElements; i++) {
         struct Node *newElement = getNewElementRandom();
         if (head == NULL) {

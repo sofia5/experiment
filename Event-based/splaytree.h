@@ -114,6 +114,7 @@ struct Node* insert(struct Node* cur, struct Node* newNode) {
 
 
 void insertNodesSplaytree(int numOfNodes) {
+    root = NULL;
     for(int i = 0; i< numOfNodes; i++){
         struct Node *newNode = getNewNodes();
         //printf("%f",newNode->priority);

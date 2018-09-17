@@ -52,6 +52,7 @@ void testDoubleLinkedList() {
         averageTime = sumOfTime / 100;
         fprintf(fp,"Number of elements:%d\t Best time:%f\t Worst time:%f\t Average time:%f\t Memory usage: %ld\n",
                 numberOfElements, shortestTime, longestTime, averageTime, memoryUsage);
+        fflush(fp);
         printf("Number of elements:%d\t Best time:%f\t Worst time:%f\t Average time:%f\t Memory usage: %ld\n",
                 numberOfElements, shortestTime, longestTime, averageTime, memoryUsage);
         numberOfElements += 10;

@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 struct Node {
     double priority;
     struct Node* left;
@@ -11,18 +10,6 @@ struct Node {
 struct Node* root;
 
 //Print tree arranged by priorities (Based on: https://stackoverflow.com/questions/801740/c-how-to-draw-a-binary-tree-to-the-console)
-void printTree(struct Node *tree)
-{
-    char s[20][255];
-    for (int i = 0; i < 20; i++)
-        sprintf(s[i], "%80s", " ");
-
-    _printTree(tree, 0, 0, 0, s);
-
-    for (int i = 0; i < 20; i++)
-        printf("%s\n", s[i]);
-}
-
 int _printTree(struct Node *tree, int is_left, int offset, int depth, char s[20][255])
 {
     char b[20];
@@ -55,6 +42,18 @@ int _printTree(struct Node *tree, int is_left, int offset, int depth, char s[20]
     }
 
     return left + width + right;
+}
+
+void printTree(struct Node *tree)
+{
+    char s[20][255];
+    for (int i = 0; i < 20; i++)
+        sprintf(s[i], "%80s", " ");
+
+    _printTree(tree, 0, 0, 0, s);
+
+    for (int i = 0; i < 20; i++)
+        printf("%s\n", s[i]);
 }
 
 struct Node* getNewNodes(){
@@ -90,7 +89,7 @@ struct Node* splay(struct Node*cur, double prio){
         return cur;
     }
     //Left side of cur
-    if(cur->priority > prio){
+    else if(cur->priority > prio){
         if(cur->left == NULL){
             return cur;
         }
@@ -98,13 +97,11 @@ struct Node* splay(struct Node*cur, double prio){
         else if (cur->left->priority > prio && cur->left->left != NULL){
             cur->left = rightRot(cur->left);
             cur = rightRot(cur);
-            //splay(cur, prio);
         }
             //If node is right of parent but parent is left or grand-parent, we do a zig-zag left-right rotation.
         else if (cur->left->priority < prio  && cur->left->right != NULL){
             cur->left = leftRot(cur->left);
             cur = rightRot(cur);
-            //splay(cur, prio);
         }
         else{
             cur = rightRot(cur);
@@ -121,28 +118,22 @@ struct Node* splay(struct Node*cur, double prio){
         else if(cur->right->priority < prio  && cur->right->right != NULL){
             cur->right = leftRot(cur->right);
             cur = leftRot(cur);
-            //splay(cur, prio);
         }
             //If node is left of parent but parent is right of grand-parent, we do a zig-zag right-left rotation.
         else if(cur->right->priority > prio  && cur->right->left != NULL){
             cur->right = rightRot(cur->right);
             cur = leftRot(cur);
-            //splay(cur,prio);
         }
         else{
             cur = leftRot(cur);
         }
     }
+
     return cur;
 
 }
 
 struct Node* insert(struct Node* cur, struct Node* newNode) {
-
-//    //If node is already inserted in tree, skip
-//    if(newNode->priority == cur->priority){
-//        cur->left = cur->left;
-//    }
     if (newNode->priority <= cur->priority)
         if(cur->left == NULL){
             cur->left = newNode;
@@ -159,12 +150,10 @@ struct Node* insert(struct Node* cur, struct Node* newNode) {
     }
 }
 
-
 void insertNodesSplaytree(int numOfNodes) {
-    root = NULL;
     for(int i = 0; i< numOfNodes; i++){
         struct Node *newNode = getNewNodes();
-        //printf("%f",newNode->priority);
+        printf("Priority new node: %f\n",newNode->priority);
         if(!root){
             root = newNode;
         }
@@ -174,8 +163,42 @@ void insertNodesSplaytree(int numOfNodes) {
                 root = splay(root, newNode->priority);
             }
         }
-        //printTree(root);
+        printTree(root);
     }
+}
+
+void createNewSplayTree(){
+    root = NULL;
+}
+
+double findLowestValue(){
+    struct Node* temp = root;
+    while(temp->left){
+        temp = temp->left;
+    }
+    return temp->priority;
+}
+
+void deleteNode(){
+    struct Node* temp;
+    //find the smallest value, first in queue
+    double key = findLowestValue();
+    printf("Delete: %f\n", key);
+
+    //splay the lowest value to root
+    while (root->priority != key) {
+        root = splay(root, key);
+    }
+
+    printTree(root);
+    if (!root->left){
+        temp = root;
+        root = root->right;
+    } else {
+        temp = root;
+        root = splay(root->left, key);
+    }
+    free(temp);
 }
 
 

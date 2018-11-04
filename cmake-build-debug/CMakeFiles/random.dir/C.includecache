@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/Random (Whole number priorities in interval)/doubleLinkedList.h
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+sys/resource.h
+-
+
+/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/Random (Whole number priorities in interval)/main.c
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+sys/resource.h
+-
+limits.h
+-
+doubleLinkedList.h
+/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/Random (Whole number priorities in interval)/doubleLinkedList.h
+splaytree.h
+/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/Random (Whole number priorities in interval)/splaytree.h
+
+/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/Random (Whole number priorities in interval)/splaytree.h
+stdio.h
+-
+stdlib.h
+-
+

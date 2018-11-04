@@ -78,8 +78,6 @@ void insertFromHeadEvent (struct Element* newElement) {
 }
 
 void insertElementsDoubleLinkedList(int numberOfElements){
-    head = NULL; //clear head and tail pointer
-    tail = NULL;
     for (int i = 0; i < numberOfElements; i++) {
         struct Element *newElement = GetNewElementEvent();
         if (head == NULL) {
@@ -92,6 +90,20 @@ void insertElementsDoubleLinkedList(int numberOfElements){
         }
     }
 }
+
+void createNewDoubleLinkedList(){
+    head = NULL; //clear head and tail pointer
+    tail = NULL;
+}
+
+void deleteElementFromList(){
+    struct Element* currHead = head;
+    struct Element* newHead = head ->next;
+    free(currHead);
+    head = newHead;
+    head->prev = NULL;
+}
+
 
 //Prints all the elements in linked list in forward traversal order
 void printAll() {

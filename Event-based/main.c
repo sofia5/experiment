@@ -46,10 +46,24 @@ void testDoubleLinkedList() {
             fprintf(file_time, "\n%d,", numberOfElements);
             fprintf(file_memory, "\n%d,", numberOfElements);
             for (int i = 0; i < 100; i++) {
+                int random;
                 int num = numberOfElements;
                 getrusage(RUSAGE_SELF, &usage);
                 clock_gettime(CLOCK_MONOTONIC, &timeStart);
-                insertElementsDoubleLinkedList(num);
+                //while number of elements to insert is bigger than 9, we will generate 0 - 10 new elements.
+                createNewDoubleLinkedList();
+                while(num > 0) {
+                    if (num < 9) {
+                        insertElementsDoubleLinkedList(num);
+                        num = 0;
+                    } else {
+                        random = rand() % 10 + 1;
+                        printf("Random: %d\n", random);
+                        num = num - random;
+                        insertElementsDoubleLinkedList(random);
+                        deleteNode();
+                    }
+                }
                 clock_gettime(CLOCK_MONOTONIC, &timeEnd);
                 memoryUsage = usage.ru_maxrss;
                 fprintf(file_memory, "%ld,", memoryUsage);

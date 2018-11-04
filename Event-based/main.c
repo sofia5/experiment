@@ -26,7 +26,10 @@ void testDoubleLinkedList() {
     int numberOfElements = 10;
 
     FILE *fp;
+    FILE *file;
     fp = fopen("EventDoubleLinkedList", "w+");
+    file = fopen("EventDoubleLinkedListAll", "w+");
+    fprintf(fp, "Number of elements:;Best time:;Worst time:;Average time:;Memory usage:\n");
 
     while(numberOfElements <= 1000) {
         long memoryUsage = 0;
@@ -35,6 +38,9 @@ void testDoubleLinkedList() {
         double longestTime = LONG_MIN;
         double shortestTime = LONG_MAX;
         double sumOfTime = 0;
+
+        fprintf(file, "\n%d;", numberOfElements);
+
         for (int i = 0; i < 100; i++) {
             int num = numberOfElements;
             getrusage(RUSAGE_SELF, &usage);
@@ -47,15 +53,20 @@ void testDoubleLinkedList() {
             if(shortestTime > elapsedTime) shortestTime = elapsedTime;
             sumOfTime += elapsedTime;
 
+            fprintf(file,"%f;", elapsedTime);
+
         }
         //Print
         averageTime = sumOfTime / 100;
-        fprintf(fp,"Number of elements:%d\t Best time:%f\t Worst time:%f\t Average time:%f\t Memory usage: %ld\n",
-                numberOfElements, shortestTime, longestTime, averageTime, memoryUsage);
+        fprintf(fp, "%d;%f;%f;%f;%ld\n",numberOfElements, shortestTime, longestTime, averageTime, memoryUsage);
+        //fprintf(fp,"Number of elements:%d\t Best time:%f\t Worst time:%f\t Average time:%f\t Memory usage: %ld\n",
+        //        numberOfElements, shortestTime, longestTime, averageTime, memoryUsage);
         fflush(fp);
+        fflush(file);
         numberOfElements += 10;
     }
     fclose(fp);
+    fclose(file);
 }
 
 // Test - Best, avg, worse time and memory to insert n (10-1000) values, with an increase of
@@ -67,6 +78,7 @@ void testSplaytree() {
 
     FILE *fp;
     fp = fopen("EventSplaytree", "w+");
+    fprintf(fp, "Number of elements:;Best time:;Worst time:;Average time:;Memory usage:\n");
 
     int numberOfElements = 10;
 
@@ -90,8 +102,7 @@ void testSplaytree() {
         }
         //Print
         averageTime = sumOfTime / 100;
-        fprintf(fp, "Number of elements:%d\t Best time:%f\t Worst time:%f\t Average time:%f\t Memory usage: %ld\n",
-                numberOfElements, shortestTime, longestTime, averageTime, memoryUsage);
+        fprintf(fp, "%d;%f;%f;%f;%ld\n",numberOfElements, shortestTime, longestTime, averageTime, memoryUsage);
         numberOfElements += 10;
     }
     fclose(fp);
@@ -99,7 +110,7 @@ void testSplaytree() {
 
 int main() {
 
-    testDoubleLinkedList();
+    //testDoubleLinkedList();
     testSplaytree();
     return 0;
 

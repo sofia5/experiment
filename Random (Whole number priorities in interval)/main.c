@@ -71,7 +71,7 @@ void testSplaytree() {
         double shortestTime = 10000;
         double sumOfTime = 0;
         double averageTime = 0;
-        
+
         for (int i = 0; i < 100; i++) {
             getrusage(RUSAGE_SELF, &usage);
             clock_gettime(CLOCK_MONOTONIC, &timeStart);

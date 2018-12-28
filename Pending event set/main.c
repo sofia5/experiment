@@ -23,7 +23,7 @@ void testDoubleLinkedList() {
     srand((unsigned int) time(NULL));
     struct timespec timeStart, timeEnd;
     struct rusage usage;
-    int numberOfElements = 0;
+    int numberOfElements = 10;
 
     FILE *file_time, *file_memory, *file_shortest_time, *file_average_time, *file_longest_time;
     file_time = fopen("Event_DoubleLinkedList_Time_Raw", "w+");
@@ -94,7 +94,7 @@ void testSplaytree() {
     srand((unsigned int) time(NULL));
     struct timespec timeStart, timeEnd;
     struct rusage usage;
-    int numberOfElements = 0;
+    int numberOfElements = 10;
 
     FILE *file_time, *file_memory, *file_shortest_time, *file_average_time, *file_longest_time;
     file_time = fopen("Event_Splaytree_Time_Raw", "w+");

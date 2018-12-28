@@ -159,7 +159,8 @@ void testSplaytree() {
     fclose(file_longest_time);
 }
 
-main() {
+int main() {
     testDoubleLinkedList();
     testSplaytree();
+    return 0;
 }

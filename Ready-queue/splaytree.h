@@ -163,7 +163,7 @@ void insertNodesSplaytree(int numOfNodes) {
                 root = splay(root, newNode->priority);
             }
         }
-        printTree(root);
+        //printTree(root);
     }
 }
 

@@ -183,7 +183,6 @@ void deleteNode(){
     struct Node* temp;
     //find the smallest value, first in queue
     double key = findLowestValue();
-    printf("Delete: %f\n", key);
 
     //splay the lowest value to root
     while (root->priority != key) {

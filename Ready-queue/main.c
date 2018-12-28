@@ -35,6 +35,8 @@ void testDoubleLinkedList() {
         fprintf(file_shortest_time, "\n%d,", numberOfElements);
         fprintf(file_average_time, "\n%d,", numberOfElements);
         fprintf(file_longest_time, "\n%d,", numberOfElements);
+        /*Running 10 times in order to get average for box plot in graph*/
+
         for (int i = 0; i < 10; i++) {
             long memoryUsage = 0;
             double averageTime = 0;
@@ -92,7 +94,8 @@ void testSplaytree() {
         fprintf(file_shortest_time, "\n%d,", numberOfElements);
         fprintf(file_average_time, "\n%d,", numberOfElements);
         fprintf(file_longest_time, "\n%d,", numberOfElements);
-        for (int i = 0; i < 1; i++) {
+        /*Running 10 times in order to get average for box plot*/
+        for (int i = 0; i < 10; i++) {
             long memoryUsage = 0;
             double elapsedTime = 0;
             double longestTime = LONG_MIN;

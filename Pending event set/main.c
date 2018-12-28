@@ -107,7 +107,7 @@ void testSplaytree() {
         fprintf(file_shortest_time, "\n%d,", numberOfElements);
         fprintf(file_average_time, "\n%d,", numberOfElements);
         fprintf(file_longest_time, "\n%d,", numberOfElements);
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 10; i++) {
             long memoryUsage = 0;
             double elapsedTime = 0;
             double longestTime = LONG_MIN;
@@ -117,7 +117,7 @@ void testSplaytree() {
             fprintf(file_time, "\n%d,", numberOfElements);
             fprintf(file_memory, "\n%d,", numberOfElements);
             createNewSplayTree();
-            for (int i = 0; i < 1; i++) {
+            for (int i = 0; i < 100; i++) {
                 int random;
                 int num = numberOfElements;
                 getrusage(RUSAGE_SELF, &usage);

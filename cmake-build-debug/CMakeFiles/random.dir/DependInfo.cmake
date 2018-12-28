@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/Random (Whole number priorities in interval)/main.c" "/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug/CMakeFiles/random.dir/Random_(Whole_number_priorities_in_interval)/main.c.o"
+  "/cygdrive/c/Users/Sofia/Github/experiment/Ready-queue/main.c" "/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/CMakeFiles/random.dir/Ready-queue/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

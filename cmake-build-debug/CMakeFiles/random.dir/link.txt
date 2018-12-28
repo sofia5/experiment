@@ -1,1 +1,1 @@
-/usr/bin/cc -g  -Wl,--enable-auto-import "CMakeFiles/random.dir/Random_(Whole_number_priorities_in_interval)/main.c.o"  -o random.exe -Wl,--out-implib,librandom.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+/usr/bin/cc -g  -Wl,--enable-auto-import CMakeFiles/random.dir/Ready-queue/main.c.o  -o random.exe -Wl,--out-implib,librandom.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

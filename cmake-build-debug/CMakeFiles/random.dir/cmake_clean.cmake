@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/random.dir/Random_(Whole_number_priorities_in_interval)/main.c.o"
+  "CMakeFiles/random.dir/Ready-queue/main.c.o"
   "random.pdb"
   "random.exe"
   "librandom.dll.a"

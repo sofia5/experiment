@@ -1,6 +1,6 @@
-/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug/CMakeFiles/edit_cache.dir
-/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug/CMakeFiles/rand.dir
-/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug/CMakeFiles/event.dir
-/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug/CMakeFiles/random.dir
-/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug/CMakeFiles/Ctest.dir
+/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/CMakeFiles/edit_cache.dir
+/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/CMakeFiles/rand.dir
+/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/CMakeFiles/event.dir
+/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/CMakeFiles/Ctest.dir
+/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/CMakeFiles/ready.dir

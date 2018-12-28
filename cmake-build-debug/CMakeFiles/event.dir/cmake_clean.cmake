@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/event.dir/Event-based/main.c.o"
+  "CMakeFiles/event.dir/Pending_event_set/main.c.o"
   "event.pdb"
   "event.exe"
   "libevent.dll.a"

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Ctest.dir/randomEval.c.o"
-  "CMakeFiles/Ctest.dir/Event-based/main.c.o"
+  "CMakeFiles/Ctest.dir/Pending_event_set/main.c.o"
   "CMakeFiles/Ctest.dir/Ref.c.o"
   "Ctest.pdb"
   "Ctest.exe"

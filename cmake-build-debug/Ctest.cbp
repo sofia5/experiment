@@ -8,231 +8,231 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug"/>
+				<Option working_dir="/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug"/>
+				<Option working_dir="/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug"/>
+				<Option working_dir="/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rand">
-				<Option output="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug/rand.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug"/>
+				<Option output="/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/rand.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/x86_64-pc-cygwin"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/../../../../lib/../include/w32api"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 rand"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 rand"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rand/fast">
-				<Option output="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug/rand.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug"/>
+				<Option output="/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/rand.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/x86_64-pc-cygwin"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/../../../../lib/../include/w32api"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 rand/fast"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 rand/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="event">
-				<Option output="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug/event.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug"/>
+				<Option output="/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/event.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/x86_64-pc-cygwin"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/../../../../lib/../include/w32api"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 event"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 event"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="event/fast">
-				<Option output="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug/event.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug"/>
+				<Option output="/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/event.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/x86_64-pc-cygwin"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/../../../../lib/../include/w32api"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 event/fast"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="random">
-				<Option output="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug/random.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/x86_64-pc-cygwin"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/../../../../lib/../include/w32api"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 random"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="random/fast">
-				<Option output="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug/random.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/x86_64-pc-cygwin"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/../../../../lib/../include/w32api"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 random/fast"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 event/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Ctest">
-				<Option output="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug/Ctest.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug"/>
+				<Option output="/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Ctest.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/x86_64-pc-cygwin"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/../../../../lib/../include/w32api"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 Ctest"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 Ctest"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Ctest/fast">
-				<Option output="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug/Ctest.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/cmake-build-debug"/>
+				<Option output="/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Ctest.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/x86_64-pc-cygwin"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/../../../../lib/../include/w32api"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 Ctest/fast"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/d/Documents/KTH/Kurser/Ing.\ met/experiment/Ctest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 Ctest/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ready">
+				<Option output="/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/ready.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 ready"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ready/fast">
+				<Option output="/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/ready.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 ready/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Sofia/Github/experiment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/Event-based/doubleLinkedList.h">
+		<Unit filename="/cygdrive/c/Users/Sofia/Github/experiment/Pending event set/doubleLinkedList.h">
 			<Option target="Ctest"/>
 		</Unit>
-		<Unit filename="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/Event-based/main.c">
+		<Unit filename="/cygdrive/c/Users/Sofia/Github/experiment/Pending event set/main.c">
 			<Option target="event"/>
 			<Option target="Ctest"/>
 		</Unit>
-		<Unit filename="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/Event-based/splaytree.h">
+		<Unit filename="/cygdrive/c/Users/Sofia/Github/experiment/Pending event set/splaytree.h">
 			<Option target="Ctest"/>
 		</Unit>
-		<Unit filename="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/Random (Whole number priorities in interval)/doubleLinkedList.h">
+		<Unit filename="/cygdrive/c/Users/Sofia/Github/experiment/Ready-queue/doubleLinkedList.h">
 			<Option target="Ctest"/>
 		</Unit>
-		<Unit filename="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/Random (Whole number priorities in interval)/main.c">
-			<Option target="random"/>
+		<Unit filename="/cygdrive/c/Users/Sofia/Github/experiment/Ready-queue/main.c">
+			<Option target="ready"/>
 		</Unit>
-		<Unit filename="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/Random (Whole number priorities in interval)/splaytree.h">
+		<Unit filename="/cygdrive/c/Users/Sofia/Github/experiment/Ready-queue/splaytree.h">
 			<Option target="Ctest"/>
 		</Unit>
-		<Unit filename="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/Ref.c">
+		<Unit filename="/cygdrive/c/Users/Sofia/Github/experiment/Ref.c">
 			<Option target="Ctest"/>
 		</Unit>
-		<Unit filename="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/randomEval.c">
+		<Unit filename="/cygdrive/c/Users/Sofia/Github/experiment/randomEval.c">
 			<Option target="rand"/>
 			<Option target="Ctest"/>
 		</Unit>
-		<Unit filename="/cygdrive/d/Documents/KTH/Kurser/Ing. met/experiment/Ctest/CMakeLists.txt">
+		<Unit filename="/cygdrive/c/Users/Sofia/Github/experiment/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
